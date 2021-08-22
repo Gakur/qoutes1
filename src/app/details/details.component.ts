@@ -1,4 +1,5 @@
-import { Component,Input, OnInit } from '@angular/core';
+import { Component,EventEmitter,Input, OnInit, Output } from '@angular/core';
+// import { EventEmitter } from 'stream';
 import { Quotes } from '../quotes';
 
 @Component({
@@ -8,7 +9,8 @@ import { Quotes } from '../quotes';
 })
 export class DetailsComponent implements OnInit {
 
-  @Input() quotes:Quotes | undefined
+  @Input() quotes!:Quotes;
+  @Output() emitQuote = new EventEmitter<Quotes>();
   constructor() { }
 
   ngOnInit() {
