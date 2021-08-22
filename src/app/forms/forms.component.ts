@@ -1,4 +1,4 @@
-import { Quote } from '@angular/compiler';
+import { Quotes } from '../quotes';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
@@ -7,19 +7,11 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./forms.component.css']
 })
 export class FormsComponent implements OnInit {
-  @Output() emitQuote = new EventEmitter()
-  quoteWords!: string;
-  quoteEditor!: string
-  quoteAuthor!: string
-  quoteDate!: number
-  theWords!: any
+  newQuotes = new Quotes ("","","");
+  @Output() emitQuote = new EventEmitter<Quotes>()
 
   submitQuote() {
-    this.theWords = new Quote(this.quoteEditor, this.quoteAuthor, this.quoteWords)
-    this.quoteWords = ''
-    this.quoteAuthor = ''
-    this.quoteEditor = ''
-    this.emitQuote.emit(this.theWords)
+    this.emitQuote.emit(this.newQuotes)
   }
 
 
