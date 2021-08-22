@@ -1,29 +1,29 @@
-<div class="container-fluid" >
-    <h1>QUOTES</h1>
-    <img src="../../assets/Images/bc3.jpeg">
-  </div>
+<div class="container-fluid">
+  <h1>QUOTES</h1>
+  <img src="../../assets/Images/bc3.jpeg">
+</div>
 
-  <app-form (emitQuote)="addQuote($event)"></app-form>
+<app-forms (emitQuote)="addQuote($event)"></app-forms>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-10">
+<div class="container">
+  <div class="row">
+    <div class="col-md-10">
+      <hr>
+      <div class="myQuote" *ngFor="let quote of quotes; let i=index">
+        <p appHighlight *ngIf="highestUpvote()===quote.upvotes && quote.upvotes>0">{{quote.quote}}</p>
+        <p *ngIf="highestUpvote()!==quote.upvotes || quote.upvotes===0">{{quote.quote}}</p>
+        <app-details [quotes]="quote"></app-details>
+
+        <!-- <hr size="50"> -->
+
+
+        <button class="btn btn-primary" (click)="upvote(i)">Upvote</button>
+        <button class="btn" (click)="downvote(i)">Downvote</button>
+        <button class="btn btn-danger" (click)="delQuote(i)">Delete</button>
+
         <hr>
-        <div  class="myQuote"*ngFor="let quote of quotes; let i=index">
-          <p appHighlight *ngIf="highestUpvote()===quote.upvotes && quote.upvotes>0">{{quote.quote}}</p>
-          <p  *ngIf="highestUpvote()!==quote.upvotes || quote.upvotes===0">{{quote.quote}}</p>
-          <app-details [quote]="quote"></app-details>
 
-          <!-- <hr size="50"> -->
-
-
-          <button class="btn btn-primary" (click)="upvote(i)">Upvote</button>
-          <button class="btn" (click)="downvote(i)">Downvote</button>
-          <button class="btn btn-danger" (click)="delQuote(i)">Delete</button>
-
-          <hr>
-
-        </div>
       </div>
     </div>
   </div>
+</div>

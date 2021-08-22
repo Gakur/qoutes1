@@ -45,13 +45,14 @@
 
 </form> --> -->
 <div class="container-fluid">
-  <form (ngSubmit)="submitQuote()">
+  <form ngSubmit="submitQuote()" #quoteForm="ngForm"> 
 
     <br>
 
      <div class="form-group">
      <label for="name"><strong>Person's Name:</strong></label>
-     <input type="text"  name="publisher" class="form-control" id="exampleFormControlInput1" [(ngModel)]="quotePublisher" placeholder="Write Your Name Here:">
+     <!-- <input type="text" class="form-control" id="name" [(ngModel)]="newGoal.name" name="name" #name='ngModel' required> -->
+     <input type="text" class="form-control" id="name" [(ngModel)]="quotePublisher" name="name" #name="ngModel" placeholder="Write Your Name Here:" required>
     </div>
 
     <div class="form-group">
