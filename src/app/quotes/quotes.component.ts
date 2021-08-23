@@ -9,7 +9,7 @@ import { Quotes } from '../quotes';
 export class QuotesComponent implements OnInit {
   quotes: Quotes[] = [
     new Quotes("John Paul", "Liverpool FC", "You will never walk alone"),
-    new Quotes("Lupita", "Black Panther", "Wakanda Forever")
+    new Quotes("Clerk Joe", "Celine Dion", "Maybe i don't know that much but i know this much is true, I was blessed because i was loved by you.")
   ]
   preNum!: number
   lastNum!: number
