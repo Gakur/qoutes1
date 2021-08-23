@@ -1,3 +1,19 @@
-.card {
+.card-body {
     background-color: rgba(229, 228, 255, 0.2);
+  }
+  .form-group {
+      font-size: 1.5em;
+      margin-top: 1rem;
+  }
+  .form-group label {
+      color: #fff;
+  }
+  .card {
+      box-shadow: 0 4px 8px 0 rgb(red, green, blue);
+      margin: 8px;
+      margin-top: 75px;
+      margin-bottom: 75px;
+  }
+  #card1 {
+      background-color: rgb(red, green, blue);
   }
