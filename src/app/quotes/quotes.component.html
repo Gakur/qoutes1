@@ -1,29 +1,38 @@
 <div class="container-fluid">
   <h1>QUOTES</h1>
-  <img src="../../assets/Images/bc3.jpeg">
 </div>
-
-<app-forms (emitQuote)="addQuote($event)"></app-forms>
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-10">
-      <hr>
-      <div class="myQuote" *ngFor="let quote of quotes; let i=index">
-        <p appHighlight *ngIf="highestUpvote()===quote.upvotes && quote.upvotes>0">{{quote.quote}}</p>
-        <p *ngIf="highestUpvote()!==quote.upvotes || quote.upvotes===0">{{quote.quote}}</p>
-        <app-details [quotes]="quote"></app-details>
-
-        <!-- <hr size="50"> -->
+<!-- Main Body -->
+<section class="main intro1">
+  <div class="container">
+    <div class="container flex-center">
+      <div class="row">
+        <div class="col-md-10">
+          <hr>
+          <div class="myQuote" *ngFor="let quote of quotes; let i=index">
+            <p appHighlight *ngIf="highestUpvote()===quote.upvotes && quote.upvotes>0">{{quote.quote}}</p>
+            <p *ngIf="highestUpvote()!==quote.upvotes || quote.upvotes===0">{{quote.quote}}</p>
+            <app-details [quotes]="quote"></app-details>
 
 
-        <button class="btn btn-primary" (click)="upvote(i)">Upvote</button>
-        <button class="btn" (click)="downvote(i)">Downvote</button>
-        <button class="btn btn-danger" (click)="delQuote(i)">Delete</button>
+            <!-- <hr size="50"> -->
 
-        <hr>
 
+            <button class="btn btn-primary" (click)="upvote(i)">Upvote</button>
+            <button class="btn" (click)="downvote(i)">Downvote</button>
+            <button class="btn btn-danger" (click)="delQuote(i)">Delete</button>
+
+            <hr>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-xl-5 offset-xl-1">
+        <!-- Form -->
+        <div class="card wow fadeInRight">
+          <app-forms (emitQuote)="addQuote($event)"></app-forms>
+        </div>
+        <!-- Form -->
       </div>
     </div>
   </div>
-</div>
+</section>
