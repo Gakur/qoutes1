@@ -1,23 +1,27 @@
-.myQuote{
-    padding: 15px;
-  }
-  
-  .container-fluid{
+.container-fluid{
     /* padding: 1px; */
     text-align: center;
     background-color: blue;
+    background-image: url("../../assets/Images/bc1.jpeg");
     font-family: 'Times New Roman', Times, serif;
-    font-size: 70px;
+    font-size: 50px;
     background-size: cover;
   }
   .card {
     background-color: rgba(229, 228, 255, 0.2);
   }
   .main {
-    height: 100vh !important;
+    height: 100% !important;
   }
   .intro1 {
     background: url("../../assets/Images/bc6.jpeg");
     background-size: cover;
+  }
+  .form-group .prefix {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+  .form-group label {
+    color: #ffffff;
   }
   
