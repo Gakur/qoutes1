@@ -27,6 +27,7 @@ export class FormComponent implements OnInit {
   quoteStr!:string
   quotePublisher!:string
   quoteAuthor!:string
+  quoteDate!:number
   theQuote:any
 
   submitQuote(  ){
