@@ -1,65 +1,44 @@
-<form ngSubmit="submitQuote()" class="card-body">
-  <!-- header -->
-  <div class="row" id="card1">
-    <div class="col-lg-3 col-md-6 col-sm-6 col">
-      <div class="container">
-        <div class="card">
+<form (ngSubmit)="submitQuote()" class="card-body ">
+  <!--Header-->
+  <div class="text-center">
 
-          <h3 class="white-text"> Add new Quote <i far icon="arrow-alt-circleDownvotes:0-down"></i>
-          </h3>
-          <hr class="hr-light">
-        </div>
-
-        <div class="form-group">
-          <i class="fas fa-user prefix white-text"></i>
-          <label for="name"><strong>Person's Name:</strong></label>
-          <input type="text" class="form-control" id="name" [(ngModel)]="quotePublisher" name="name" #name="ngModel"
-            placeholder="Write Your Name Here:" required>
-        </div>
-
-        <div class="form-group">
-          <i class="fas fa-quote-left prefix white-text"></i>
-          <label for="quotes"><strong>Quotes:</strong></label>
-          <input type="text" name="quote" class="form-control" id="exampleFormControlInput1" [(ngModel)]="quoteStr"
-            placeholder="Add Your Quote Here:">
-        </div>
-
-        <div class="form-group">
-          <i class="fas fa-user prefix white-text"></i>
-          <label for="author"><strong>Author:</strong></label>
-          <input type="text" name="author" class="form-control" id="exampleFormControlInput1" [(ngModel)]="quoteAuthor"
-            placeholder="Add Name of the Author Here:">
-        </div>
-        <div class="form-group">
-          <i class="far fa-clock prefix white-text"></i>
-          <input type='date' id="form5" class="form-control white-text" name="completeDate" [(ngModel)]="quoteDate"
-            mdbInput>
-          <label class=" white-text" for="form5">Completion Date</label>
-        </div>
-        <div class="text-center">
-          <button type="submit" mdbBtn color="indigo" class="waves-light btn btn-info" mdbWavesEffect>Post
-            Quote</button>
-          <hr class="hr-light mb-3 mt-4">
-
-          <div class="inline-ul text-center d-flex justify-content-center">
-            <a class="icons-sm tw-ic px-4" href="https://twitter.com/login"><i
-                class="fab fa-twitter white-text"></i>Twitter
-            </a>
-            <a class="icons-sm li-ic px-4"><i class="fab fa-linkedin-in white-text" href="https://www.linkedin.com/ ">
-              </i>
-            </a>
-            <a class="icons-sm ins-ic px-4" href="https://www.instagram.com/accounts/login/"> <i
-                class="fab fa-instagram"></i>Instagram
-            </a>
-            <a href="facebook.com"> <i class="fab fa-facebook-square"></i> Facebook</a>
-          </div>
-        </div>
-
-
-      </div>
-
-    </div>
-
+    <h3 class="white-text"> Add New Quote <i far icon="arrow-alt-circleDownvotes:0-down"></i>
+    </h3>
+    <hr class="hr-light">
   </div>
+
+  <!--Body-->
+
+  <div class="form-group">
+    <i class="fas fa-user prefix white-text"></i>
+    <input type="text" id="form3" class="form-control " name="publisher" [(ngModel)]="quotePublisher" formInput>
+    <label for="form3">Your name</label>
+  </div>
+  <div class="form-group">
+    <i class="fas fa-quote-left prefix white-text"></i>
+    <input type="text" id="form2" class="form-control" name="quote" [(ngModel)]="quoteStr" formInput>
+    <label for="form2">Quote</label>
+  </div>
+
+  <div class="form-group">
+    <i class="fas fa-user prefix white-text"></i>
+    <input type="text" id="form4" class="form-control" name="author" [(ngModel)]="quoteAuthor" formInput>
+    <label for="form4">Author of quote</label>
+  </div>
+  <div class="form-group">
+    <i class="far fa-clock prefix white-text"></i>
+    <input type='date' id="form5" class="form-control white-text" name="completeDate" [(ngModel)]="quoteDate" formInput>
+    <label class=" white-text" for="form5">Date when posted</label>
+    </div>
+    <div class="text-center">
+      <button type="submit" mdbBtn color="indigo" class="waves-light btn btn-info" mdbWavesEffect>Post Quote</button>
+      <hr class="hr-light mb-3 mt-4">
+
+      <div class="inline-ul text-center d-flex justify-content-center">
+        <a class="icons-sm tw-ic px-4" href="https://twitter.com/login"><i class="fab fa-twitter white-text"></i>Twitter</a>
+        <a class="icons-sm li-ic px-4" href="https://www.facebook.com/login"><i class="fa fa-facebook-official" aria-hidden="true"></i>Facebook</a>
+        <a class="icons-sm ins-ic px-4" href="https://www.instagram.com/accounts/login/"><i class="fab fa-instagram white-text">Instagram</i></a>
+      </div>
+    </div>
 
 </form>
