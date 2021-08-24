@@ -35,15 +35,15 @@
   }
   .card {
       box-shadow: 0 4px 8px 0 rgb(red, green, blue);
-      margin: 50px;
-      margin-top: 75px;
-      margin-bottom: 75px;
+
       text-align: center;
   }
-  #card1 {
+  /* #card1 {
       background-color: rgb(red, green, blue);
       text-align: center;
-  }
+      margin-top: 50px;
+      margin-bottom: 50px;
+  } */
   #but1 {
     color: red;
   }
