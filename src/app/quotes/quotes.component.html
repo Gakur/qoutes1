@@ -9,7 +9,7 @@
       <div class="row">
         <div class="col-md-10">
           <hr>
-          <div class="myQuote" *ngFor="let quote of quotes; let i=index">
+          <div class="myQuote" *ngFor="let quote of highQuote; let i=index">
             <p appHighlight *ngIf="highestUpvote()===quote.upvotes && quote.upvotes>0">{{quote.quote}}</p>
             <p *ngIf="highestUpvote()!==quote.upvotes || quote.upvotes===0">{{quote.quote}}</p>
             <app-details [quotes]="quote"></app-details>
