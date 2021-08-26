@@ -38,6 +38,11 @@ export class QuotesComponent implements OnInit {
     }
     return this.preNum
   }
+  get highQuote(){
+    return this.quotes.sort((a,b) =>{
+      return b.upvotes-a.upvotes
+    })
+  }
   constructor() { }
 
   ngOnInit() {
